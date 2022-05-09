@@ -32,6 +32,15 @@
     margin: 40px 0;
 }
 
+.thumbnail {
+    object-fit: contain;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+    
+}
+
 .results {
     max-width: 650px;
     margin-top: 20px;
@@ -57,8 +66,10 @@
 
 .resultSnippet {
     margin-top: 10px;
-    color: gray;
+    color: #444242;
     text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 

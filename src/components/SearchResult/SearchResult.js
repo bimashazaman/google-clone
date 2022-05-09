@@ -77,14 +77,23 @@ function SearchResult() {
         </p>
         {data?.items.map((item) => (
           <div className="result">
+            <a href={item.link}>
+              {item.pagemap?.cse_thumbnail?.length > 0 && (
+                <img
+                  className="thumbnail"
+                  src={item.pagemap?.cse_thumbnail[0]?.src}
+                  alt="thumbnail"
+                />
+              )}
+            </a>
             <a href={item.link}>    
-                {item.diplayLink}
+                {item.displayLink}
             </a>
-            <a href={item.link}>
-              <h2 className="resultTitle">{item.title}</h2>
+            <a className="resultTitle" href={item.link}>
+              <h2 >{item.title}</h2>
             </a>
-            <a href={item.link}>
-              <p className="resultSnippet">{item.snippet}</p>
+            <a href={item.link} className="resultSnippet">
+              <p className="resultSnippet">{item.snippet}...</p>
             </a>
           </div>
         ))}
